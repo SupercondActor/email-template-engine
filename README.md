@@ -2,7 +2,7 @@
 #### Lightweight template engine for rendering elaborate emails using Json data####
 > Use this engine to merge email template file with data expressed as Json object.
 
-##Usage example:
+## Usage example:
 ```
 var templateContent = "Email from: {{firstName}} {{lastName}}";
 var jsonData = "{'firstName': 'MyFirstName', 'lastName': 'MyLastName'}";
@@ -20,7 +20,7 @@ Feature | Template Tags | Description
 ------- | ------------- | -----------
 Field value | {{Person.FirstName}} | Renders value of the field FirstName
 Equivalent syntax | {{$.Person.FirstName}} | Renders value of the field FirstName
-Item from array | [[$.orderLines]] Line {{LineNumber}} [[/$.orderLines]] | Renders content of the orderLines array
+Items from array | [[$.orderLines]] Line {{LineNumber}} [[/$.orderLines]] | Renders content of the orderLines array
 Reference to Parent | Line from order number {{$$$$.orderNumber}} | Renders field from parent object
 
 ## Another example

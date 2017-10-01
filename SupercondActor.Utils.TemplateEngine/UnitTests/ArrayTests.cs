@@ -107,7 +107,7 @@ Item {{$$$$.orderNumber}}/{{$.LineNumber}}: {{$.Item}}, your price: {{$.Price~C}
 ]},
 { 'LineNumber': 2, 'Item': 'iPad', 'Price': 900.99 }
 ]
-}";
+}"; 
 
             var template = @"
 <h1>Dear {{$.fname}} {{$.lname}},</h1>
