@@ -98,14 +98,14 @@ Item {{$$$$.orderNumber}}/{{$.LineNumber}}: {{$.Item}}, your price: {{$.Price~C}
         [TestMethod]
         public void ShouldRenderRecursiveArrays()
         {
-            var json = @"{""fname"":""John"", ""lname"":""Doe"", ""Amount"": 13.25, ""Date"": ""2013-10-21T13:28:06.419Z"",
-""OrderLines"": [
-{ ""LineNumber"": 1, ""Item"": ""iPhone"", ""Price"": 600.01,
-""Accessories"": [
-{ ""Number"": 1, ""Name"": ""Cord"" },
-{ ""Number"": 2, ""Name"": ""Cover"" }
+            var json = @"{'fname':'John', 'lname':'Doe', 'Amount': 13.25, 'Date': '2013-10-21T13:28:06.419Z',
+'OrderLines': [
+{ 'LineNumber': 1, 'Item': 'iPhone', 'Price': 600.01,
+'Accessories': [
+{ 'Number': 1, 'Name': 'Cord' },
+{ 'Number': 2, 'Name': 'Cover' }
 ]},
-{ ""LineNumber"": 2, ""Item"": ""iPad"", ""Price"": 900.99 }
+{ 'LineNumber': 2, 'Item': 'iPad', 'Price': 900.99 }
 ]
 }";
 
