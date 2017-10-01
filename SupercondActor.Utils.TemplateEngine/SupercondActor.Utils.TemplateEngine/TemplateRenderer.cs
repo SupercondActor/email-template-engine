@@ -173,9 +173,9 @@ namespace SupercondActor.Utils.TemplateEngine
             while (extPath.StartsWith("$$"))
             {
                 extPath = extPath.Substring(1);
-                exToken = exToken.Parent;
+                exToken = exToken?.Parent;
             }
-            return exToken.SelectToken(extPath);
+            return exToken?.SelectToken(extPath);
         }
     }
 }

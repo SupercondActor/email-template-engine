@@ -48,6 +48,17 @@ namespace UnitTests
         }
 
         [TestMethod]
+        public void OneField2()
+        {
+            var templateContent = "One field: {{$.name}}";
+            var data = new { name = "fieldName" };
+
+            var result = _renderer.Render(templateContent, data);
+
+            Assert.AreEqual("One field: fieldName", result);
+        }
+
+        [TestMethod]
         public void OneFieldHtmlEncoded()
         {
             var templateContent = "One html field: {{name}}";
@@ -80,5 +91,15 @@ namespace UnitTests
             Assert.AreEqual("From json: MyFirstName, MyLastName", result);
         }
 
+        [TestMethod]
+        public void DeepFields()
+        {
+            var templateContent = "From deep: {{From.Address.Person.firstName}}, {{$.From.Address.Person.lastName}}";
+            var jsonData = "{'From': {'Address': {'Person': {'firstName': 'MyFirstName', 'lastName': 'MyLastName'}}}}";
+
+            var result = _renderer.Render(templateContent, jsonData);
+
+            Assert.AreEqual("From deep: MyFirstName, MyLastName", result);
+        }
     }
 }
