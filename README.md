@@ -1,5 +1,5 @@
 # SupercondActor Template Engine
-#### Lightweight template engine for rendering elaborate emails using Json data####
+#### Lightweight template engine for rendering elaborate emails using Json data
 > Use this engine to merge email template file with data expressed as Json object.
 
 ## Usage example:

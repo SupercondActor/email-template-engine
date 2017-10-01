@@ -3,6 +3,21 @@
   <PropertyGroup>
     <TargetFrameworks Condition="'$(LibraryFrameworks)'==''">net45;netstandard1.0;netstandard1.3;netstandard2.0</TargetFrameworks>
     <TargetFrameworks Condition="'$(LibraryFrameworks)'!=''">$(LibraryFrameworks)</TargetFrameworks>
+    <PackageId>SupercondActor.Utils.TemplateEngine</PackageId>
+    <Authors>Aleksey Solonchev</Authors>
+    <Description>Lightweight template engine for rendering elaborate emails using Json data.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>Template Renderer</PackageReleaseNotes>
+    <Copyright>Copyright 2017 (c) Aleksey Solonchev. All rights reserved.</Copyright>
+    <PackageTags>json email template renderer</PackageTags>
+    <PackageProjectUrl>https://github.com/SupercondActor/email-template-engine</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/SupercondActor/email-template-engine/master/LICENSE</PackageLicenseUrl>
+    <RepositoryUrl>https://github.com/SupercondActor/email-template-engine</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <RootNamespace>SupercondActor.Utils.TemplateEngine</RootNamespace>
+    <AssemblyName>SupercondActor.Utils.TemplateEngine</AssemblyName>
+    <Version>1.0.1</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
