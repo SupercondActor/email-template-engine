@@ -17,7 +17,7 @@
     <RootNamespace>SupercondActor.Utils.TemplateEngine</RootNamespace>
     <AssemblyName>SupercondActor.Utils.TemplateEngine</AssemblyName>
     <Version>1.0.1</Version>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>

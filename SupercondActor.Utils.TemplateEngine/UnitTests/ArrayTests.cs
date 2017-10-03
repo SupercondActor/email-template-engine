@@ -60,8 +60,29 @@ Item {{$.LineNumber}}: {{$.Item}}, your price: {{$.Price~C}} <br/>[[/$.orderLine
             Assert.IsTrue(result.Contains("$600.02"));
             Assert.IsTrue(result.Contains("$900.99"));
             Assert.IsTrue(result.Contains("$1,200.00"));
-
         }
+
+        [TestMethod]
+        public void ArrayDataObject()
+        {
+            var templateContent = @"<p>Here is your order:</p>
+[[$]]
+Item {{$.LineNumber}}: {{$.Item}}, your price: {{$.Price~C}} <br/>[[/$]]
+";
+
+            var dataJson = @"[
+{ 'LineNumber': 1, 'Item': 'iPhone', 'Price': 600.0199 },
+{ 'LineNumber': 2, 'Item': 'iPad', 'Price': 900.99 },
+{ 'LineNumber': 3, 'Item': 'iTV', 'Price': 1200 }
+]";
+
+            var result = _renderer.Render(templateContent, dataJson);
+
+            Assert.IsTrue(result.Contains("$600.02"));
+            Assert.IsTrue(result.Contains("$900.99"));
+            Assert.IsTrue(result.Contains("$1,200.00"));
+        }
+
 
         [TestMethod]
         public void ParentReferenceInTheList()
