@@ -28,7 +28,7 @@ namespace UnitTests
     [TestClass]
     public class ArrayTests
     {
-        private ITemplateRenderer _renderer; 
+        private ITemplateRenderer _renderer;
 
         [TestInitialize]
         public void TestInitialize()

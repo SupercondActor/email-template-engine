@@ -82,7 +82,9 @@ To create a beautiful email, you need two things:
 1.	A template describing email layout
 2.	A data object holding values for the placeholders in the template
 You call Renderer method to merge template with the data:
+```
 var result = renderer.Render(templateContent, jsonData);
+```
 As the result, you'll get the content of the email body. Actually, if you want to place some data in the email's subject, you can also create a simple template to render the subject string.
 ## Data object
 You can provide the data for your template as pretty much any .NET object. Internally it will be serialized as Json anyway. You can also supply your data as a Json string - this option is very useful when you store the data in a database or a file.
@@ -92,7 +94,10 @@ Field referencing rules are based on the standard JSONPath notation. See example
 In the SupercondActor Template Engine we extended JSONPath with the ability to reference parent fields from a child's context (see examples below).
 ## Template notation
 To make a simple reference in the template you use double curly braces notation: {{myFieldName}}.
-To render an array of items use double square brackets: [[$.arrayName]] {{item}} [[/$.arrayName]]
+To render an array of items use double square brackets: 
+```
+[[$.arrayName]] {{item}} [[/$.arrayName]]
+```
 ## Simple reference to a plain object field
 Let's say you have a simple data object serialized as Json:
 ```
@@ -117,9 +122,9 @@ Data object:
 ```
 {'name': 'John',
 'orderLines': [
-{ 'LineNumber': 1, 'Item': 'iPhone', 'Price': 600.0199 },
-{ 'LineNumber': 2, 'Item': 'iPad', 'Price': 900.99 },
-{ 'LineNumber': 3, 'Item': 'iTV', 'Price': 1200 }
+	{ 'LineNumber': 1, 'Item': 'iPhone', 'Price': 600.0199 },
+	{ 'LineNumber': 2, 'Item': 'iPad', 'Price': 900.99 },
+	{ 'LineNumber': 3, 'Item': 'iTV', 'Price': 1200 }
 ]
 }
 ```
