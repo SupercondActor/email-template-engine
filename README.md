@@ -137,7 +137,7 @@ Item {{$.LineNumber}}: {{$.Item}}, your price: {{$.Price~C}} <br/>[[/$.orderLine
 ```
 Note, that here the dollar sign specifies current context: in the [[$.orderLines]] the $ refers to the root data object, in the line description the $ refers to the child context - the current line. To refer to a field in the parent context from a child one you need to add more dollar signs to the notation, see the details in the sections below.
 ## Field formatting
-You can specify a format for numeric and date/time fields, for example {{$.Price~C}}.
+You can specify a format for numeric and date/time fields, for example {{$.Price ~ C}}.
 You need to separate the field name from the format string using the '~' sign. In this example we format number as currency. The format definition string can be anything you would use in the Decimal.ToString("#.00") C# method call.
 Referencing parent fields from a child context
 Sometimes when rendering an array, you need to refer to a field form a parent object, like referencing Order Number inside an order Line data. To move up the context chain just add more dollar signs in front of the field name.
