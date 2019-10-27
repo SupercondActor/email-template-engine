@@ -2,6 +2,10 @@
 #### Lightweight template engine for rendering elaborate emails using Json data
 > Use this engine to merge email template file with data expressed as Json object.
 
+## NuGet
+
+SupercondActor.Utils.TemplateEngine
+
 ## Usage example:
 ```
 var templateContent = "Email from: {{firstName}} {{lastName}}";
