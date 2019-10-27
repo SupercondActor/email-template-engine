@@ -10,7 +10,7 @@ SupercondActor.Utils.TemplateEngine
 ```
 var templateContent = "Email from: {{firstName}} {{lastName}}";
 var jsonData = "{'firstName': 'MyFirstName', 'lastName': 'MyLastName'}";
-renderer = new TemplateRenderer();
+var renderer = new TemplateRenderer();
 var result = renderer.Render(templateContent, jsonData);
 ```
 Resulting text:
